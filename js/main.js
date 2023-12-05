@@ -76,10 +76,17 @@ colorSelectors.forEach(function(selector) {
 //Transform .intro__form height into margin-bottom for .intro
 
 function setIntroMargin() {
-    var formHeight = document.querySelector('.intro__form').offsetHeight;
-    var pictureThumbHeight = document.querySelector('.intro__picture-thumb').offsetHeight;
+    var windowWidth = window.innerWidth;
 
-    document.querySelector('.intro').style.marginBottom = formHeight - pictureThumbHeight + 48 + 'px';
+    if (windowWidth < 820) {
+        var formHeight = document.querySelector('.intro__form').offsetHeight;
+        var pictureThumbHeight = document.querySelector('.intro__picture-thumb').offsetHeight;
+
+        document.querySelector('.intro').style.marginBottom = formHeight - pictureThumbHeight + 32 + 'px';
+    } else {
+        // Якщо ширина екрану більше 820 пікселів, скидати margin-bottom
+        document.querySelector('.intro').style.marginBottom =  16 + 'px';
+    }
 }
 
 window.addEventListener('load', setIntroMargin);
