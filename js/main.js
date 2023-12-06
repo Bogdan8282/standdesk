@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var header = document.querySelector('.header');
     var headerWrap = document.querySelector('.header__wrap');
     var headerHeight = header.offsetHeight;
-    var scrollThreshold = 0.02;
+    var scrollThreshold = 0.01;
     var originalPadding = 32;
     var reducedPadding = 16;
 
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //Desk view selector
 
 document.addEventListener("DOMContentLoaded", function () {
-    const listItems = document.querySelectorAll(".view__list-item");
+    const listItems = document.querySelectorAll(".view__list-row");
     const imageElement = document.getElementById("deskDisplay");
 
     listItems[0].classList.add("selected");
