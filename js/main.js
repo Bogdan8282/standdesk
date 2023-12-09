@@ -32,7 +32,6 @@ document.getElementById('phoneInput').addEventListener('focus', function() {
 });
 
 //Intro color selector
-
 document.addEventListener("DOMContentLoaded", function () {
     const listItems = document.querySelectorAll(".color__selector");
 
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     listItems.forEach(function (item) {
         item.addEventListener("click", function () {
-
             listItems.forEach(function (item) {
                 item.classList.remove("active");
             });
@@ -50,28 +48,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Intro button submit
+document.addEventListener("DOMContentLoaded", function () {
+    const listItems = document.querySelectorAll(".color__selector");
+    const submitButton = document.querySelector('.intro__order');
+
+    let formSubmitted = false;
+
+    listItems[0].classList.add("active");
+
+    listItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+            if (!formSubmitted) {
+                listItems.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+                this.classList.add("active");
+            }
+        });
+    });
+
+    submitButton.addEventListener('click', function () {
+        if (!formSubmitted) {
+            submitOrder();
+
+            // Clear form fields
+            document.getElementById('nameInput').value = '';
+            document.getElementById('phoneInput').value = '';
+
+            // Disable further submissions
+            formSubmitted = true;
+
+            // Show notification
+            showNotification();
+        }
+    });
+});
 
 function submitOrder() {
     var nameInput = document.getElementById('nameInput').value;
     var phoneInput = document.getElementById('phoneInput').value;
 
-    var selectedColorElement = document.querySelector('.color__selector.selected');
-    var selectedColor = selectedColorElement ? selectedColorElement.getAttribute('data-color') : 'Не вибрано';
+    var selectedColorElement = document.querySelector('.color__selector.active');
+    var selectedColor = selectedColorElement ? selectedColorElement.getAttribute('data') : 'Не вибрано';
 
     console.log('Ім\'я:', nameInput);
     console.log('Номер телефону:', phoneInput);
     console.log('Колір столу:', selectedColor);
 }
 
-var colorSelectors = document.querySelectorAll('.color__selector');
-colorSelectors.forEach(function(selector) {
-    selector.addEventListener('click', function() {
-        colorSelectors.forEach(function(otherSelector) {
-            otherSelector.classList.remove('selected');
-        });
-        selector.classList.add('selected');
-    });
-});
+function showNotification() {
+    // Display a notification to the user
+    alert("Ваше замовлення відправлено. З вами скоро зв'яжуться.");
+}
+
+
 
 //Transform .intro__form height into margin-bottom for .intro
 
