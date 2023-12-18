@@ -14,45 +14,45 @@
     <header class="header">
             <div class="header__wrap">
                 <div class="header__logo">
-                    <a href="#" class="header__logo-link">
+                    <a href="#!" class="header__logo-link">
                         <img src="./img/svg/logo-yellow.svg" alt="StandDesk" class="header__logo-pic">
                     </a>
                 </div>
     
                 <nav class="header__nav">
+                    <div class="header__nav-close">
+                        <span class="header__nav-close_line header__line-left"></span>
+                        <span class="header__nav-close_line header__line-right"></span>
+                    </div>
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#" class="header__link">Замовлення</a>
+                            <a href="#order" class="header__link">Замовлення</a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">Переваги</a>
+                            <a href="#advantages" class="header__link">Переваги</a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">Як це працює</a>
+                            <a href="#how_it_works" class="header__link">Як це працює</a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">Характеристики</a>
+                            <a href="#parameters" class="header__link">Характеристики</a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">Відгуки</a>
+                            <a href="#comments" class="header__link">Відгуки</a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">Гарантія</a>
+                            <a href="#guarantee" class="header__link">Гарантія</a>
                         </li>
                         <li class="header__item">
-                            <a href="#" class="header__link">FAQ</a>
+                            <a href="#questions" class="header__link">FAQ</a>
                         </li>
 					</ul>
-                    <div class="header__nav-close">
-						<span class="header__nav-close-line"></span>
-						<span class="header__nav-close-line"></span>
-					</div>
 				</nav>
-				<div class="header__menu menu">
-					<span class="header__menu-line header__menu-line_first"></span>
-					<span class="header__menu-line header__menu-line_second"></span>
-					<span class="header__menu-line header__menu-line_third"></span>
-				</div>
+				<div class="header__menu">
+                    <div class="header__menu-line first_line"></div>
+                    <div class="header__menu-line second_line"></div>
+                    <div class="header__menu-line third_line"></div>
+                </div>
             </div>
     </header>
 
@@ -62,7 +62,7 @@
 
         <!-- Intro start -->
 
-        <section class="intro">
+        <section class="intro" id="order">
             <div class="wrapper">
                 <div class="intro__wrap">
                     <div class="intro__form-adapt">
@@ -177,7 +177,7 @@
 
         <!-- Gifts start -->
 
-        <section class="gifts">
+        <section class="gifts" id="advantages">
             <div class="wrapper">
                 <div class="gifts__wrap">
                     <div class="gifts__text-adapt">
@@ -210,7 +210,7 @@
 
         <!-- Desk view start -->
 
-        <section class="desk__view">
+        <section class="desk__view" id="how_it_works">
             <div class="wrapper">
                 <div class="view__wrap">
                     <div class="view__text-adapt">
@@ -250,7 +250,7 @@
 
         <!-- Characteristics start -->
 
-        <section class="characteristics">
+        <section class="characteristics" id="parameters">
             <div class="wrapper">
                 <div class="characteristics__wrap">
                     <h2 class="characteristics__caption">
@@ -286,7 +286,7 @@
                             <p class="characteristics__list-item-value">70 кг</p>
                         </li>
                         <li class="characteristics__list-item">
-                            <h4 class="characteristics__list-item-text">Розміри в розібраному вигляді</h4>
+                            <h4 class="characteristics__list-item-text">В розібраному вигляді</h4>
                             <p class="characteristics__list-item-value">85x70x10см</p>
                         </li>
                         <li class="characteristics__list-item">
@@ -316,7 +316,7 @@
                     <div class="demonstration__desk">
                         <div class="demonstration__desk-item"> 
                             <div class="demonstration__desk-image">
-                                <img src="./img/demonstration-desk.jpg" alt="StandDesk Picture" class="demonstration__desk-pic">
+                                <img src="./img/demonstration-desk.jpg" alt="StandDesk Picture" id="deskImage" class="demonstration__desk-pic">
                             </div>
                             <div class="demonstration__desk-caption">
                                 <h2 class="demonstration__desk-caption-main">
@@ -342,7 +342,7 @@
 
         <!-- Feedbacks start -->
 
-        <section class="feedbacks">
+        <section class="feedbacks" id="comments">
             <div class="wrapper">
                 <div class="feedbacks__wrap">
                     <div class="feedbacks__top">
@@ -365,7 +365,7 @@
                                 </div>
                                 <div class="slider__item-feedback__author">
                                     <div class="feedback__author-pic">
-                                        <img src="./img/alina-baikova.jpg" alt="">
+                                        <img src="./img/alina-baikova.png" alt="">
                                     </div>
                                     <p class="feedback__author-name">
                                         <span class="yellow__text">Аліна Байкова</span>
@@ -393,7 +393,7 @@
                                 </div>
                                 <div class="slider__item-feedback__author">
                                     <div class="feedback__author-pic">
-                                        <img src="./img/ivan-sergeyev.jpg" alt="">
+                                        <img src="./img/ivan-sergeyev.png" alt="">
                                     </div>
                                     <p class="feedback__author-name">
                                         <span class="yellow__text">Іван Сергеєв</span>
@@ -520,7 +520,7 @@
         <section class="terms">
             <div class="wrapper">
                 <div class="terms__wrap">
-                    <div class="terms__guarantee">
+                    <div class="terms__guarantee" id="guarantee">
                         <div class="terms__guarantee-image">
                             <img src="./img/guarantee-background.jpg" alt="" class="terms__guarantee-pic">
                         </div>
@@ -570,7 +570,7 @@
 
         <!-- FAQ start -->
 
-        <section class="faq">
+        <section class="faq" id="questions">
             <div class="wrapper">
                 <div class="faq__wrap">
                     <div class="faq__caption">
@@ -673,7 +673,7 @@
             <div class="footer__wrap">
                 <div class="footer__info">
                     <div class="footer__logo">
-                        <a href="#" class="footer__logo-link">
+                        <a href="#!" class="footer__logo-link">
                             <img src="./img/svg/logo-black.svg" alt="StandDesk" class="footer__logo-pic">
                         </a>
                     </div>
@@ -683,19 +683,19 @@
                     </span>
                 </div>
                 <div class="footer__media">
-                    <a href="#" class="footer__media-link">
+                    <a href="#!" class="footer__media-link">
                         <img src="./img/svg/media-instagram.svg" alt="Instagram" class="footer__media-pic">
                         <p class="footer__media-caption">Instagram</p>
                     </a>
-                    <a href="#" class="footer__media-link">
+                    <a href="#!" class="footer__media-link">
                         <img src="./img/svg/media-whatsapp.svg" alt="WhatsApp" class="footer__media-pic">
                         <p class="footer__media-caption">WhatsApp</p>
                     </a>
-                    <a href="#" class="footer__media-link">
+                    <a href="#!" class="footer__media-link">
                         <img src="./img/svg/media-messenger.svg" alt="Messenger" class="footer__media-pic">
                         <p class="footer__media-caption">Messenger</p>
                     </a>
-                    <a href="#" class="footer__media-link">
+                    <a href="#!" class="footer__media-link">
                         <img src="./img/svg/media-google.svg" alt="Google" class="footer__media-pic">
                         <p class="footer__media-caption">Google</p>
                     </a>

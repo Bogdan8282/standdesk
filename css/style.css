@@ -21,11 +21,6 @@ time, mark, audio, video{
 	vertical-align: baseline;
 }
 
-/* make sure to set some focus styles for accessibility */
-:focus{
-    outline: 0;
-}
-
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section{
@@ -405,21 +400,21 @@ textarea{
 
 /* Adding some colors as var */
 
-:root{
+:root {
     --r-yellow: 241;
     --g-yellow: 191;
     --b-yellow: 66;
-    --yellow-color: rgb(var(--r-yellow),  var(--g-yellow), var(--b-yellow));
+    --yellow-color: rgb(var(--r-yellow), var(--g-yellow), var(--b-yellow));
     
     --r-gray: 232;
     --g-gray: 232;
     --b-gray: 233;
-    --gray-color: rgb(var(--r-gray),  var(--g-gray), var(--b-gray));
+    --gray-color: rgb(var(--r-gray), var(--g-gray), var(--b-gray));
 
     --r-black: 29;
     --g-black: 29;
     --b-black: 31;
-    --black-color: rgb(var(--r-black),  var(--g-black), var(--b-black));
+    --black-color: rgb(var(--r-black), var(--g-black), var(--b-black));
 }
 
 html{
@@ -446,13 +441,8 @@ body{
 
 /* Removing unwanted borders on links */
 
-.header__logo-link{
-    outline: none !important;
-    border: 0 !important;
-}
-
-.footer__logo-link{
-    outline: none !important;
+a:focus{
+    outline: 0 !important;
     border: 0 !important;
 }
 
@@ -491,7 +481,7 @@ h4{
 }
 
 .underline__black{
-    border-bottom: 2px solid #000; 
+    border-bottom: 2px solid var(--black-color); 
 }
 
 .underline__yellow{
@@ -582,39 +572,45 @@ h4{
 .header__link{
     font-size: 12px;
     line-height: 24px;
-    color: #000;
+    color: var(--black-color);
     text-decoration: none;
-    transform: color 0.2s ease;
+    transform: 0.2s ease;
 }
 
 .header__nav{
     margin-left: auto;
 }
 
-.header__link:hover, .header__link:focus, .header__link:active{
+.header__link:hover, .header__link:active{
     color: var(--yellow-color);
 }
 
-.header__menu-line{
+
+
+.header__menu {
+    position: relative;
     display: none;
-    width: 100%;
-    height: 2px;
+}
+
+.header__menu-line{
     position: absolute;
-    left: 0;
-    background-color: var(--black-color);
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--black-color);
 }
 
-.header__menu-line_first{
-    top: 0;
+.first_line{
+    top: 30%;
 }
 
-.header__menu-line_second{
+.second_line{
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%, -50%)
 }
 
-.header__menu-line_third{
-    bottom: 0;
+.third_line{
+    bottom: 30%;
 }
 
 /* Header end */
@@ -707,7 +703,7 @@ h4{
     cursor: pointer;
     width: 172px;
     height: 48px;
-    color: #000;
+    color: var(--black-color);
     font-size: 12px;
     font-weight: 500;
     line-height: normal;
@@ -771,8 +767,6 @@ h4{
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
-    width: 133px;
-    height: 63px;
     padding: 12px 16px;
     justify-content: center;
     border-radius: 8px;
@@ -842,7 +836,7 @@ h4{
     display: flex;
     flex-direction: column;
     width: 232px;
-    padding: 16px 27px 17px 27px;
+    padding: 16px 27px 22px 27px;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
@@ -941,7 +935,7 @@ h4{
 
 .gifts__image{
     width: 580px;
-    max-height: 420px;
+    height: 420px;
     border-radius: 8px;
 }
 
@@ -1278,7 +1272,7 @@ h4{
 }
 
 .slider__item-feedback:first-child{
-    margin-right: 24px;
+    margin-right: 0 12px;
 }
 
 .slider__item-feedback__logo{
@@ -1410,6 +1404,7 @@ h4{
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
+    margin-bottom: 32px;
 }
 
 .terms__delivery{
@@ -1429,7 +1424,7 @@ h4{
     flex-direction: column;
     top: 0;
     left: 50%;
-    color: #000;
+    color: var(--black-color);
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -1534,7 +1529,7 @@ h4{
 }
 
 .faq__item-question-text{
-    max-width: 95%;
+    max-width: 92%;
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
@@ -1683,7 +1678,7 @@ h4{
 }
 
 @media screen and (max-width: 1056px){
-    h1, .faq__caption-main, .demonstration__desk-caption-main{
+    h1, .faq__caption-main, .demonstration__desk-caption-main, .intro__form-title-adapt{
         font-size: 36px !important;
     }
 
@@ -1700,7 +1695,7 @@ h4{
     }
 
     .header__item{
-        margin-right: 20px;
+        margin-right: 19px;
     }
 
     .characteristics__list-item p{
@@ -1776,6 +1771,67 @@ h4{
 }
 
 @media screen and (max-width: 820px){
+    .header__menu {
+        display: block;
+        cursor: pointer;
+        width: 24px;
+        height: 40px;
+    }
+    
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 140vh;
+        width: 100%;
+        background-color: rgb(0, 0, 0, 0.9);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s ease;
+    }
+
+    .header__list{
+        flex-direction: column;
+    }
+
+    .header__item{
+        margin: 10px;
+    }
+    
+    .header__link{
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    .header__nav-close {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto;
+    }
+    
+    .header__nav-close_line{
+        display: flex;
+        position: absolute;
+        right: 24px;
+        content: '';
+        height: 30px;
+        width: 2px;
+        background: #fff;
+    }
+    
+    .header__line-left{
+        rotate: 135deg;
+    }
+    
+    .header__line-right{
+        rotate: 45deg;
+    }
+
     .intro {
         margin: 104px 0 64px 0;
     }
@@ -1849,7 +1905,7 @@ h4{
     }
 
     .intro__form-title-adapt{
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 
     .intro__form-offer{
@@ -1929,7 +1985,6 @@ h4{
     }
 
     .terms__guarantee{
-        height: 420px;
         margin: 0 auto 16px auto;
     }
 
@@ -1962,6 +2017,7 @@ h4{
 
     .demonstration__desk-caption-undertext{
         bottom: 8%;
+        font-size: 16px;
     }
 
     .demonstration__desk-image::after{
@@ -1994,7 +2050,7 @@ h4{
 }
 
 @media screen and (max-width: 620px){
-    h1, .faq__caption-main, .demonstration__desk-caption-main{
+    h1, .faq__caption-main, .demonstration__desk-caption-main, .intro__form-title-adapt{
         font-size: 26px !important;
     }
 
@@ -2008,6 +2064,18 @@ h4{
 
     h4{
         font-size: 11px !important;
+    }
+
+    .price__caption{
+        font-size: 20px;
+    }
+
+    .present__caption{
+        font-size: 16px;
+    }
+
+    .special-offer__caption{
+        font-size: 12px;
     }
 
     .gifts__text-adapt .gifts__caption{
@@ -2086,6 +2154,14 @@ h4{
 }
 
 @media screen and (max-width: 540px){
+    .picture__caption {
+        right: 5%;
+    }
+
+    .special-offer__caption{
+        max-width: 243px;
+    }
+
     .view__list-line{
         width: 68%;
     }
@@ -2093,6 +2169,10 @@ h4{
     .characteristics__list {
         gap: 12px 0;
     }
+
+    .demonstration__desk-pic {
+        height: 540px;
+    }    
 
     .footer__wrap{
         flex-wrap: wrap;
@@ -2110,7 +2190,11 @@ h4{
     }
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 480px){
+    .color__selector{
+        width: 156px;
+    }
+
     .view__list-line{
         width: 72%;
     }
@@ -2120,9 +2204,100 @@ h4{
         height: 290px;
     }
 
+    .characteristics__list-item:nth-last-child(-n+3) {
+        grid-column: span 2;
+    }
+
     .view__image {
         width: 340px;
         height: 440px;
+    }
+
+    .benefits__wrap{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .benefits__item {
+        flex-direction: row;
+        justify-content: left;
+        width: 100%;
+        max-width: 328px;
+        padding: 16px;
+        border-radius: 0;
+    }
+
+    .benefits__item:first-child{
+        border-radius: 8px 8px 0 0;
+    }
+
+    .benefits__item:last-child{
+        border-radius: 0 0 8px 8px;
+    }
+
+    
+}
+
+@media screen and (max-width: 389px){
+    .entry__field {
+        width: 288px;
+    }
+
+    .view__list{
+        gap: 6px;
+    }
+
+    .view__image {
+        width: 320px;
+        height: 400px;
+    }
+
+    .view__text-adapt{
+        width: 100%;
+        margin: 0 auto 0 16px;
+    }
+
+    .demonstration__desk{
+        width: 100%;
+    }
+
+    .demonstration__desk-pic {
+        height: auto;
+    }  
+
+    .terms__guarantee {
+        height: 450px;
+    }
+
+    .terms__delivery{
+        height: 450px;
+    }
+
+    .faq__caption-undertext{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .color__selection{
+        justify-content: left;
+    }
+}
+
+@media screen and (max-width: 335px){
+    .terms__guarantee {
+        height: 480px;
+    }
+
+    .terms__delivery{
+        height: 480px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .view__image{
+        border-radius: 0;
     }
 }
 

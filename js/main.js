@@ -19,12 +19,41 @@ document.addEventListener("DOMContentLoaded", function() {
             headerWrap.style.padding = originalPadding + "px";
         }
     });
+    document.querySelectorAll('.header__link').forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight,
+                    behavior: 'smooth'
+                });
+
+                nav.style.right = '-100%';
+            }
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuButton = document.querySelector('.header__menu');
+    const nav = document.querySelector('.header__nav');
+    const navCloseButton = document.querySelector('.header__nav-close');
+
+    menuButton.addEventListener('click', function () {
+        nav.style.right = '0';
+    });
+
+    navCloseButton.addEventListener('click', function () {
+        nav.style.right = '-100%';
+    });
 });
 
 
-
 //Intro phone input
-
 document.getElementById('phoneInput').addEventListener('focus', function() {
     if (this.value === '') {
         this.value = '+38 (';
@@ -33,7 +62,7 @@ document.getElementById('phoneInput').addEventListener('focus', function() {
 
 //Intro color selector
 document.addEventListener("DOMContentLoaded", function () {
-    const listItems = document.querySelectorAll(".color__selector");
+    let listItems = document.querySelectorAll(".color__selector");
 
     listItems[0].classList.add("active");
 
@@ -49,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Intro button submit
 document.addEventListener("DOMContentLoaded", function () {
-    const listItems = document.querySelectorAll(".color__selector");
-    const submitButton = document.querySelector('.intro__order');
+    let listItems = document.querySelectorAll(".color__selector");
+    let submitButton = document.querySelector('.intro__order');
 
     let formSubmitted = false;
 
@@ -71,14 +100,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!formSubmitted) {
             submitOrder();
 
-            // Clear form fields
             document.getElementById('nameInput').value = '';
             document.getElementById('phoneInput').value = '';
 
-            // Disable further submissions
             formSubmitted = true;
 
-            // Show notification
             showNotification();
         }
     });
@@ -97,7 +123,6 @@ function submitOrder() {
 }
 
 function showNotification() {
-    // Display a notification to the user
     alert("Ваше замовлення відправлено. З вами скоро зв'яжуться.");
 }
 
@@ -105,8 +130,8 @@ function showNotification() {
 //Gifts selector
 
 document.addEventListener("DOMContentLoaded", function () {
-    const listItems = document.querySelectorAll(".gifts__list-item");
-    const imageElement = document.getElementById("imageDisplay");
+    let listItems = document.querySelectorAll(".gifts__list-item");
+    let imageElement = document.getElementById("imageDisplay");
 
     listItems[0].classList.add("selected");
     
@@ -141,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
         }
 
-        const imagePath = `./img/${imageName}`;
+        let imagePath = `./img/${imageName}`;
 
         imageElement.src = imagePath;
     }
@@ -150,8 +175,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //Desk view selector
 
 document.addEventListener("DOMContentLoaded", function () {
-    const listItems = document.querySelectorAll(".view__list-row");
-    const imageElement = document.getElementById("deskDisplay");
+    let listItems = document.querySelectorAll(".view__list-row");
+    let imageElement = document.getElementById("deskDisplay");
 
     listItems[0].classList.add("selected");
     
@@ -182,15 +207,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 imageName = "desk-down.jpg";
                 break;
             default:
-                imageName = "default-image.jpg";
+                imageName = "desk-up.jpg";
                 break;
         }
 
-        const imagePath = `./img/${imageName}`;
+        let imagePath = `./img/${imageName}`;
 
         imageElement.src = imagePath;
     }
 });
+
+//Adaptive image for demonstration section
+
+var deskImage = document.getElementById('deskImage');
+var currentSource = deskImage.src;
+
+function updateImageSource() {
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var breakpoint = 480;
+
+  if (screenWidth < breakpoint && currentSource !== './img/demonstration-desk-adapt.jpg') {
+    deskImage.src = './img/demonstration-desk-adapt.jpg';
+    currentSource = './img/demonstration-desk-adapt.jpg';
+  } else if (screenWidth >= breakpoint && currentSource !== './img/demonstration-desk.jpg') {
+    deskImage.src = './img/demonstration-desk.jpg';
+    currentSource = './img/demonstration-desk.jpg';
+  }
+}
+
+updateImageSource();
+window.addEventListener('resize', updateImageSource);
 
 //Feedbacks "slick" slider
 
@@ -223,12 +269,12 @@ $(document).ready(function () {
 
 //FAQ question switch
 
-const faqQuestions = document.querySelectorAll('.faq__item-question');
+let faqQuestions = document.querySelectorAll('.faq__item-question');
 
 faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        const faqItem = question.closest('.faq__item');
+        let answer = question.nextElementSibling;
+        let faqItem = question.closest('.faq__item');
 
         if (faqItem.classList.contains('active')) {
             answer.style.maxHeight = "0";
