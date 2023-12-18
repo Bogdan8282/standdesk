@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StandDesk</title>
+    <link rel="icon" href="./img/svg/standdesk-fav.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Header start -->
+
+    <header class="header">
+            <div class="header__wrap">
+                <div class="header__logo">
+                    <a href="#!" class="header__logo-link">
+                        <img src="./img/svg/logo-yellow.svg" alt="StandDesk" class="header__logo-pic">
+                    </a>
+                </div>
+    
+                <nav class="header__nav">
+                    <div class="header__nav-close">
+                        <span class="header__nav-close_line header__line-left"></span>
+                        <span class="header__nav-close_line header__line-right"></span>
+                    </div>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#order" class="header__link">Замовлення</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#advantages" class="header__link">Переваги</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#how_it_works" class="header__link">Як це працює</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#parameters" class="header__link">Характеристики</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#comments" class="header__link">Відгуки</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#guarantee" class="header__link">Гарантія</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#questions" class="header__link">FAQ</a>
+                        </li>
+					</ul>
+				</nav>
+				<div class="header__menu">
+                    <div class="header__menu-line first_line"></div>
+                    <div class="header__menu-line second_line"></div>
+                    <div class="header__menu-line third_line"></div>
+                </div>
+            </div>
+    </header>
+
+    <!-- Header end -->
+
+    <main class="main">
+
+        <!-- Intro start -->
+
+        <section class="intro" id="order">
+            <div class="wrapper">
+                <div class="intro__wrap">
+                    <div class="intro__form-adapt">
+                        <h2 class="intro__form-title-adapt">
+                            <span class="underline__black">Трансформуйте</span> своє робоче місце з <span class="yellow__text underline__yellow-spiky">StandDesk</span>
+                        </h2>
+                    </div>
+                    <div class="intro__offer">
+                        <div class="intro__offer-pic">
+                            <img src="./img/intro-desk.jpg" alt="StandDesk photo" class="intro__picture-thumb">
+                        </div>
+                        <div class="picture__caption">
+                            <div class="intro__price">
+                                <p class="price__caption">5600 ₴</p>
+                            </div>
+                            <div class="intro__presents">
+                                <span class="digit__caption">3</span> 
+                                <p class="present__caption">подарунки на суму 760 грн</p>
+                            </div>
+                            <div class="intro__special-offer">
+                                <p class="special-offer__caption">безкоштовна доставка при замовленні до 20 вересня!</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="intro__form">
+                        <h1 class="intro__form-title">
+                            <span class="underline__black">Трансформуйте</span> своє робоче місце з <span class="yellow__text underline__yellow-spiky">StandDesk</span>
+                        </h1>
+                        <p class="intro__form-advantages">
+                            Наші столи з регулюванням висоти - це ваш крок до <span class="bold italic">здорового</span> та <span class="bold italic">продуктивного</span> життя
+                        </p>
+                        <p class="intro__form-offer">
+                            Замовляйте свій стіл <span class="underline__yellow yellow__text">за неймовірною ціною</span> прямо зараз!
+                        </p>
+                        <fieldset class="search__wrap">
+                            <p class="search__info">
+                                <input type="text" name="username" id="nameInput" class="entry__field" placeholder="Ім'я" maxlength="15">
+                                <input type="tel" name="phone" id="phoneInput" class="entry__field" placeholder="Номер телефону" maxlength="19" required="">
+                            </p>
+                        </fieldset>
+                        <div class="color__selection">
+                            <div class="color__selector" id="natural" data="Натуральний">
+                                Натуральний
+                            </div>
+                            <div class="color__selector" id="dark" data="Темний">
+                                Темний
+                            </div>
+                            <div class="color__selector" id="grey" data="Сірий">
+                                Сірий
+                            </div>
+                        </div>
+                        <button type="submit" class="intro__order" onclick="submitOrder()">
+                            Замовити
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro end -->
+
+        <!-- Benefits start -->
+
+        <section class="benefits">
+            <div class="wrapper">
+                <div class="benefits__wrap">
+                    <div class="benefits__item file__item">
+                        <div class="benefits__item-pic">
+                            <img src="./img/svg/file.svg" alt="File" class="benefits__item-thumb">
+                        </div>
+                        <div class="benefits__item-desc">
+                            <p class="benefits__item-text">Зростає продуктивність</p>
+                        </div>
+                    </div>
+                    <div class="benefits__item heart__item">
+                        <div class="benefits__item-pic">
+                            <img src="./img/svg/heart.svg" alt="Heart" class="benefits__item-thumb">
+                        </div>
+                        <div class="benefits__item-desc">
+                            <p class="benefits__item-text">Знижує біль у спині</p>
+                        </div>
+                    </div>
+                    <div class="benefits__item arrows__item">
+                        <div class="benefits__item-pic">
+                            <img src="./img/svg/arrows.svg" alt="Arrows" class="benefits__item-thumb arrows">
+                        </div>
+                        <div class="benefits__item-desc">
+                            <p class="benefits__item-text">Покращує поставу</p>
+                        </div>
+                    </div>
+                    <div class="benefits__item nerd__item">
+                        <div class="benefits__item-pic">
+                            <img src="./img/svg/nerd.svg" alt="Nerd" class="benefits__item-thumb nerd">
+                        </div>
+                        <div class="benefits__item-desc">
+                            <p class="benefits__item-text">Бореться з втомою</p>
+                        </div>
+                    </div>
+                    <div class="benefits__item bolt__item">
+                        <div class="benefits__item-pic">
+                            <img src="./img/svg/bolt.svg" alt="Bolt" class="benefits__item-thumb bolt">
+                        </div>
+                        <div class="benefits__item-desc">
+                            <p class="benefits__item-text">Підвищує енергію</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits end -->
+
+        <!-- Gifts start -->
+
+        <section class="gifts" id="advantages">
+            <div class="wrapper">
+                <div class="gifts__wrap">
+                    <div class="gifts__text-adapt">
+                        <h2 class="gifts__caption">
+                            <span class="underline__black">З кожним</span> замовленням <span class="yellow__text underline__yellow-spiky">ви отримуєте</span>
+                        </h2>
+                    </div>
+                    <div class="gifts__wrap-image">
+                        <img id="imageDisplay" src="./img/computer-holder.jpg" alt="Computer Holder" class="gifts__image">
+                        <span class="gifts__image-text">Подарунок</span>
+                    </div>
+                    <div class="gifts__text">
+                        <h2 class="gifts__caption">
+                            <span class="underline__black">З кожним</span> замовленням <span class="yellow__text underline__yellow-spiky">ви отримуєте</span>
+                        </h2>
+                        <ul class="gifts__list">
+                            <li class="gifts__list-item">підставку під ноутбук</li>
+                            <li class="gifts__list-item">підставку під чашку</li>
+                            <li class="gifts__list-item">гравіювання вашого напису</li>
+                        </ul>
+                        <h2 class="gifts__caption-prolong">
+                            <span class="yellow__text underline__yellow-spiky-long">абсолютно безкоштовно!</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gifts end -->
+
+        <!-- Desk view start -->
+
+        <section class="desk__view" id="how_it_works">
+            <div class="wrapper">
+                <div class="view__wrap">
+                    <div class="view__text-adapt">
+                        <h2 class="view__text-main-adapt">
+                            <span class="yellow__text underline__yellow-spiky-long" style="background-size: 207%">Як це працює</span>
+                        </h2>
+                    </div>
+                    <div class="desk__view-pic">
+                        <img id="deskDisplay" src="./img/desk-up.jpg" alt="Computer Holder" class="view__image">
+                    </div>
+                    <div class="view__text">
+                        <h2 class="view__text-main">
+                          <span class="yellow__text underline__yellow-spiky-long" style="background-size: 207%">Як це працює</span>
+                        </h2>
+                        <div class="view__list">
+                            <div class="view__list-row">
+                                <div class="view__list-item"></div>
+                                <div class="view__list-caption">Стояча форма</div>
+                            </div>
+                            <div class="view__list-row">
+                                <div class="view__list-item"></div>
+                                <div class="view__list-caption">Процес підйому</div>
+                            </div>
+                            <div class="view__list-row" id="last_row">
+                                <div class="view__list-item"></div>
+                                <div class="view__list-caption">Сидяча форма</div>
+                            </div>
+                            <div class="view__list-line"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desk view end -->
+
+        <!-- Characteristics start -->
+
+        <section class="characteristics" id="parameters">
+            <div class="wrapper">
+                <div class="characteristics__wrap">
+                    <h2 class="characteristics__caption">
+                        Характеристики <span class="yellow__text underline__yellow-spiky">продукту</span>
+                    </h2>
+                    <ul class="characteristics__list">
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Розміри стільниці</h4>
+                            <p class="characteristics__list-item-value">80*60 см</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Полиця</h4>
+                            <p class="characteristics__list-item-value">16*60 см</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Органайзер</h4>
+                            <p class="characteristics__list-item-value">20*10 см</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Підставка під чашку</h4>
+                            <p class="characteristics__list-item-value">Матеріал</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Підставка під ноутбук</h4>
+                            <p class="characteristics__list-item-value">В подарунок</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Матеріал</h4>
+                            <p class="characteristics__list-item-value">Фанера ФК ½</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Рекомендована вага</h4>
+                            <p class="characteristics__list-item-value">70 кг</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">В розібраному вигляді</h4>
+                            <p class="characteristics__list-item-value">85x70x10см</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Габарити (в найнижчому положенні)</h4>
+                            <p class="characteristics__list-item-value">80x60x80 см</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Висота стільниці від підлоги</h4>
+                            <p class="characteristics__list-item-value">Від 80 см до 110 см</p>
+                        </li>
+                        <li class="characteristics__list-item">
+                            <h4 class="characteristics__list-item-text">Покриття</h4>
+                            <p class="characteristics__list-item-value">Акрилова фарба (Польща), безпечна для дітей та дорослих</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characteristics end -->
+
+        <!-- Demonstration start -->
+
+        <section class="demonstration">
+            <div class="wrapper">
+                <div class="demonstration__wrap">
+                    <div class="demonstration__desk">
+                        <div class="demonstration__desk-item"> 
+                            <div class="demonstration__desk-image">
+                                <img src="./img/demonstration-desk.jpg" alt="StandDesk Picture" id="deskImage" class="demonstration__desk-pic">
+                            </div>
+                            <div class="demonstration__desk-caption">
+                                <h2 class="demonstration__desk-caption-main">
+                                    Cтоли <span class="yellow__text underline__yellow-spiky">StandDesk</span>
+                                </h2>
+                                <h3 class="demonstration__desk-caption-text">
+                                    це поєднання якості, дизайну та інновацій
+                                </h3>
+                                <p class="demonstration__desk-caption-undertext">
+                                    Вони призначені для комфортної роботи, незалежно від ваших потреб
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demonstration__logo">
+                        <img src="./img/grey-logo.jpg" alt="StandDesk Logo" class="demonstration__logo-pic">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demonstration end -->
+
+        <!-- Feedbacks start -->
+
+        <section class="feedbacks" id="comments">
+            <div class="wrapper">
+                <div class="feedbacks__wrap">
+                    <div class="feedbacks__top">
+                        <h2 class="feedbacks__top-caption">
+                            <span class="yellow__text underline__yellow-spiky">Відгуки</span> клієнтів
+                        </h2>
+                    </div>
+                    <div class="feedbacks__slider">
+                        <div class="slider__item">
+                            <div class="slider__item-feedback">
+                                <div class="slider__item-feedback__logo">
+                                    <img src="./img/svg/round-small-logo.svg" alt="Round Logo">
+                                </div>
+                                <div class="slider__item-feedback__text">
+                                    <p class="feedback__text-item">
+                                        I've only used it one day so far, so I'm not here to write a review about its longevity. However, I can speak to how solidly it is made and how easy it is to operate.
+                                        <span class="italic">The controls are straightforward, and I was able to quickly set a couple of different heights with the memory buttons.</span>
+                                        <br><br>The motor is very quiet and not intrusive at all. I have migraines, so that part is important to me (mentioning it in case this applies to you too).
+                                    </p>
+                                </div>
+                                <div class="slider__item-feedback__author">
+                                    <div class="feedback__author-pic">
+                                        <img src="./img/alina-baikova.png" alt="">
+                                    </div>
+                                    <p class="feedback__author-name">
+                                        <span class="yellow__text">Аліна Байкова</span>
+                                    </p>
+                                    <p class="feedback__author-info">
+                                        Харків, 28 років, Маркетинг-спеціалист
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider__item">
+                            <div class="slider__item-feedback">
+                                <div class="slider__item-feedback__logo">
+                                    <img src="./img/svg/round-small-logo.svg" alt="Round Logo">
+                                </div>
+                                <div class="slider__item-feedback__text">
+                                    <p class="feedback__text-item">
+                                        We bought this desk to use in our sewing room. My partner (6'3") likes to sew standing up, while I (5'1") sew seated.
+                                        <span class="italic">The desk was simple to assemble.</span>
+                                        <br><br>Had *excellent* clear instructions and helpful markings. And once assembled the desk is sturdy and attractive.
+                                        It adjusts higher than he needs, and its lowest settle works well for me. Highly recommend.
+                                        <span class="bold">Definitely higher quality than expected.</span>
+                                    </p>
+                                </div>
+                                <div class="slider__item-feedback__author">
+                                    <div class="feedback__author-pic">
+                                        <img src="./img/ivan-sergeyev.png" alt="">
+                                    </div>
+                                    <p class="feedback__author-name">
+                                        <span class="yellow__text">Іван Сергеєв</span>
+                                    </p>
+                                    <p class="feedback__author-info">
+                                        Чернівці, 30 років, Ruby Developer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider__item">
+                            <div class="slider__item-feedback">
+                                <div class="slider__item-feedback__logo">
+                                    <img src="./img/svg/round-small-logo.svg" alt="Round Logo">
+                                </div>
+                                <div class="slider__item-feedback__text">
+                                    <p class="feedback__text-item">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu sagittis elit. Aliquam erat volutpat. Sed euismod mi id justo ultrices vestibulum. 
+                                        Duis ullamcorper risus ac metus vestibulum, non feugiat dolor ultricies. Vivamus euismod varius ex, ac auctor massa fringilla at. In sed justo sit amet odio varius varius ac vitae massa. 
+                                        Donec nec nisi vel nulla tincidunt cursus. Sed nec hendrerit elit. Cras dignissim, arcu et tristique varius, elit purus blandit est, nec egestas quam lacus et purus.
+                                    </p>
+                                </div>
+                                <div class="slider__item-feedback__author">
+                                    <div class="feedback__author-pic">
+                                        <img src="./img/alina-baikova.jpg" alt="">
+                                    </div>
+                                    <p class="feedback__author-name">
+                                        <span class="yellow__text">Аліна Байкова</span>
+                                    </p>
+                                    <p class="feedback__author-info">
+                                        Харків, 28 років, Маркетинг-спеціалист
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider__item">
+                            <div class="slider__item-feedback">
+                                <div class="slider__item-feedback__logo">
+                                    <img src="./img/svg/round-small-logo.svg" alt="Round Logo">
+                                </div>
+                                <div class="slider__item-feedback__text">
+                                    <p class="feedback__text-item">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu sagittis elit. Aliquam erat volutpat. Sed euismod mi id justo ultrices vestibulum. 
+                                        Duis ullamcorper risus ac metus vestibulum, non feugiat dolor ultricies. Vivamus euismod varius ex, ac auctor massa fringilla at. In sed justo sit amet odio varius varius ac vitae massa. 
+                                        Donec nec nisi vel nulla tincidunt cursus. Sed nec hendrerit elit. Cras dignissim, arcu et tristique varius, elit purus blandit est, nec egestas quam lacus et purus.
+                                    </p>
+                                </div>
+                                <div class="slider__item-feedback__author">
+                                    <div class="feedback__author-pic">
+                                        <img src="./img/ivan-sergeyev.jpg" alt="">
+                                    </div>
+                                    <p class="feedback__author-name">
+                                        <span class="yellow__text">Іван Сергеєв</span>
+                                    </p>
+                                    <p class="feedback__author-info">
+                                        Чернівці, 30 років, Ruby Developer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider__item">
+                            <div class="slider__item-feedback">
+                                <div class="slider__item-feedback__logo">
+                                    <img src="./img/svg/round-small-logo.svg" alt="Round Logo">
+                                </div>
+                                <div class="slider__item-feedback__text">
+                                    <p class="feedback__text-item">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu sagittis elit. Aliquam erat volutpat. Sed euismod mi id justo ultrices vestibulum. 
+                                        Duis ullamcorper risus ac metus vestibulum, non feugiat dolor ultricies. Vivamus euismod varius ex, ac auctor massa fringilla at. In sed justo sit amet odio varius varius ac vitae massa. 
+                                        Donec nec nisi vel nulla tincidunt cursus. Sed nec hendrerit elit. Cras dignissim, arcu et tristique varius, elit purus blandit est, nec egestas quam lacus et purus.
+                                    </p>
+                                </div>
+                                <div class="slider__item-feedback__author">
+                                    <div class="feedback__author-pic">
+                                        <img src="./img/alina-baikova.jpg" alt="">
+                                    </div>
+                                    <p class="feedback__author-name">
+                                        <span class="yellow__text">Аліна Байкова</span>
+                                    </p>
+                                    <p class="feedback__author-info">
+                                        Харків, 28 років, Маркетинг-спеціалист
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider__item">
+                            <div class="slider__item-feedback">
+                                <div class="slider__item-feedback__logo">
+                                    <img src="./img/svg/round-small-logo.svg" alt="Round Logo">
+                                </div>
+                                <div class="slider__item-feedback__text">
+                                    <p class="feedback__text-item">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu sagittis elit. Aliquam erat volutpat. Sed euismod mi id justo ultrices vestibulum. 
+                                        Duis ullamcorper risus ac metus vestibulum, non feugiat dolor ultricies. Vivamus euismod varius ex, ac auctor massa fringilla at. In sed justo sit amet odio varius varius ac vitae massa. 
+                                        Donec nec nisi vel nulla tincidunt cursus. Sed nec hendrerit elit. Cras dignissim, arcu et tristique varius, elit purus blandit est, nec egestas quam lacus et purus.
+                                    </p>
+                                </div>
+                                <div class="slider__item-feedback__author">
+                                    <div class="feedback__author-pic">
+                                        <img src="./img/ivan-sergeyev.jpg" alt="">
+                                    </div>
+                                    <p class="feedback__author-name">
+                                        <span class="yellow__text">Іван Сергеєв</span>
+                                    </p>
+                                    <p class="feedback__author-info">
+                                        Чернівці, 30 років, Ruby Developer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedbacks end -->
+
+        <!-- Terms start -->
+
+        <section class="terms">
+            <div class="wrapper">
+                <div class="terms__wrap">
+                    <div class="terms__guarantee" id="guarantee">
+                        <div class="terms__guarantee-image">
+                            <img src="./img/guarantee-background.jpg" alt="" class="terms__guarantee-pic">
+                        </div>
+                        <div class="terms__guarantee-text">
+                            <div class="terms__guarantee-text-pic">
+                                <img src="./img/svg/shield.svg" alt="Shield" class="terms__guarantee-text-thumb">
+                            </div>
+                            <h3 class="terms__guarantee-heading underline__white-spiky">
+                                Гарантія
+                            </h3>
+                            <p class="terms__guarantee-main">
+                                Наша гарантія — якщо вам стіл не сподобається,
+                            </p>
+                            <p class="terms__guarantee-conditions">
+                                <span class="underline__white">ми повернемо 100% вартості і оплатимо доставку за свій рахунок</span>
+                            </p>
+                            <p class="terms__guarantee-undertext">
+                                Ми прагнемо, щоб ви були задоволені!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="terms__delivery">
+                        <div class="terms__delivery-text">
+                            <div class="terms__delivery-text-pic">
+                                <img src="./img/svg/truck.svg" alt="Truck" class="terms__delivery-text-thumb">
+                            </div>
+                            <h3 class="terms__delivery-heading">
+                                <span class="underline__black-spiky-long">Доставка і оплата</span>
+                            </h3>
+                            <p class="terms__delivery-main">
+                                Ми працюємо без передоплати
+                            </p>
+                            <p class="terms__delivery-conditions">
+                                <span class="underline__yellow">і забезпечуємо безкоштовну доставку</span>
+                            </p>
+                            <p class="terms__delivery-undertext">
+                                <span class="italic">Новою Поштою</span> по всій Україні. Зручність і надійність нашого сервісу — наш пріоритет
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms end -->
+
+        <!-- FAQ start -->
+
+        <section class="faq" id="questions">
+            <div class="wrapper">
+                <div class="faq__wrap">
+                    <div class="faq__caption">
+                        <h2 class="faq__caption-main">
+                            <span class="underline__yellow-spiky-short">FAQ</span>
+                        </h2>
+                        <p class="faq__caption-undertext">
+                            У вас є питання? Ми маємо відповіді!
+                        </p>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__item-question">
+                            <p class="faq__item-question-text">
+                                На що потрібно звернути увагу при виборі столу, що регулюється для роботи стоячи?
+                            </p>
+                            <div class="faq__item-question-pic">
+                                <img class="faq__item-question-thumb" src="./img/svg/arrow-down-yellow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq__item-answer">
+                            <p class="faq__item-answer-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Id diam maecenas ultricies mi eget mauris pharetra.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__item-question">
+                            <p class="faq__item-question-text">
+                                Яким має бути робочий стіл?
+                            </p>
+                            <div class="faq__item-question-pic">
+                                <img class="faq__item-question-thumb" src="./img/svg/arrow-down-yellow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq__item-answer">
+                            <p class="faq__item-answer-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Id diam maecenas ultricies mi eget mauris pharetra.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__item-question">
+                            <p class="faq__item-question-text">
+                                Навіщо потрібен стіл для роботи стоячи?
+                            </p>
+                            <div class="faq__item-question-pic">
+                                <img class="faq__item-question-thumb" src="./img/svg/arrow-down-yellow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq__item-answer">
+                            <p class="faq__item-answer-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Id diam maecenas ultricies mi eget mauris pharetra.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__item-question">
+                            <p class="faq__item-question-text">
+                                Як правильно облаштувати робочий стіл?
+                            </p>
+                            <div class="faq__item-question-pic">
+                                <img class="faq__item-question-thumb" src="./img/svg/arrow-down-yellow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq__item-answer">
+                            <p class="faq__item-answer-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Id diam maecenas ultricies mi eget mauris pharetra.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__item">
+                        <div class="faq__item-question">
+                            <p class="faq__item-question-text">
+                                Скільки часу займе доставка?
+                            </p>
+                            <div class="faq__item-question-pic">
+                                <img class="faq__item-question-thumb" src="./img/svg/arrow-down-yellow.svg" alt="Arrow">
+                            </div>
+                        </div>
+                        <div class="faq__item-answer">
+                            <p class="faq__item-answer-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Id diam maecenas ultricies mi eget mauris pharetra.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ end -->
+
+        <!-- Footer start -->
+
+        <footer class="footer">
+            <div class="footer__wrap">
+                <div class="footer__info">
+                    <div class="footer__logo">
+                        <a href="#!" class="footer__logo-link">
+                            <img src="./img/svg/logo-black.svg" alt="StandDesk" class="footer__logo-pic">
+                        </a>
+                    </div>
+                    <div class="footer__line"></div>
+                    <span class="footer__info-text">
+                        Офіційний сайт виробника
+                    </span>
+                </div>
+                <div class="footer__media">
+                    <a href="#!" class="footer__media-link">
+                        <img src="./img/svg/media-instagram.svg" alt="Instagram" class="footer__media-pic">
+                        <p class="footer__media-caption">Instagram</p>
+                    </a>
+                    <a href="#!" class="footer__media-link">
+                        <img src="./img/svg/media-whatsapp.svg" alt="WhatsApp" class="footer__media-pic">
+                        <p class="footer__media-caption">WhatsApp</p>
+                    </a>
+                    <a href="#!" class="footer__media-link">
+                        <img src="./img/svg/media-messenger.svg" alt="Messenger" class="footer__media-pic">
+                        <p class="footer__media-caption">Messenger</p>
+                    </a>
+                    <a href="#!" class="footer__media-link">
+                        <img src="./img/svg/media-google.svg" alt="Google" class="footer__media-pic">
+                        <p class="footer__media-caption">Google</p>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer end -->
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
