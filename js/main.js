@@ -219,24 +219,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Adaptive image for demonstration section
 
-var deskImage = document.getElementById('deskImage');
-var currentSource = deskImage.src;
+// var deskImage = document.getElementById('deskImage');
+// var currentSource = deskImage.src;
 
-function updateImageSource() {
-  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  var breakpoint = 480;
+// function updateImageSource() {
+//   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+//   var breakpoint = 480;
 
-  if (screenWidth < breakpoint && currentSource !== './img/demonstration-desk-adapt.jpg') {
-    deskImage.src = './img/demonstration-desk-adapt.jpg';
-    currentSource = './img/demonstration-desk-adapt.jpg';
-  } else if (screenWidth >= breakpoint && currentSource !== './img/demonstration-desk.jpg') {
-    deskImage.src = './img/demonstration-desk.jpg';
-    currentSource = './img/demonstration-desk.jpg';
-  }
-}
+//   if (screenWidth < breakpoint && currentSource !== './img/demonstration-desk-adapt.jpg') {
+//     deskImage.src = './img/demonstration-desk-adapt.jpg';
+//     currentSource = './img/demonstration-desk-adapt.jpg';
+//   } else if (screenWidth >= breakpoint && currentSource !== './img/demonstration-desk.jpg') {
+//     deskImage.src = './img/demonstration-desk.jpg';
+//     currentSource = './img/demonstration-desk.jpg';
+//   }
+// }
 
-updateImageSource();
-window.addEventListener('resize', updateImageSource);
+// updateImageSource();
+// window.addEventListener('resize', updateImageSource);
 
 //Feedbacks "slick" slider
 
