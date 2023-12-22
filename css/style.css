@@ -574,7 +574,7 @@ h4{
     line-height: 24px;
     color: var(--black-color);
     text-decoration: none;
-    transform: 0.2s ease;
+    transition: color 0.12s ease;
 }
 
 .header__nav{
@@ -1515,6 +1515,7 @@ h4{
 .faq__item.active{
     border-radius: 8px;
     border: 1px solid #D2D2D3;
+    border-top: 0;
 }
 
 .faq__item-question{
@@ -1541,13 +1542,13 @@ h4{
     top: 50%;
     right: 32px;
     transform: translateY(-50%);
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
 }
 
 .faq__item-answer{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    transition: max-height 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
     opacity: 0;
 }
 
@@ -1622,6 +1623,7 @@ h4{
     color: var(--yellow-color);
     text-decoration: none;
     margin-right: 32px;
+    transition: opacity 0.12s ease;
 }
 
 .footer__media-link:hover{
@@ -2101,7 +2103,6 @@ h4{
 
     .view__text-adapt{
         display: flex;
-        width: 373px;
     }
 
     .view__text-main-adapt{
@@ -2254,7 +2255,6 @@ h4{
     }
 
     .view__text-adapt{
-        width: 100%;
         margin: 0 auto 0 16px;
     }
 
