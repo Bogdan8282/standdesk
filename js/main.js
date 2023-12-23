@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 //Intro phone input
+
 document.getElementById('phoneInput').addEventListener('focus', function() {
     if (this.value === '') {
         this.value = '+38 (';
@@ -61,6 +61,7 @@ document.getElementById('phoneInput').addEventListener('focus', function() {
 });
 
 //Intro color selector
+
 document.addEventListener("DOMContentLoaded", function () {
     let listItems = document.querySelectorAll(".color__selector");
 
@@ -77,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Intro button submit
+
 document.addEventListener("DOMContentLoaded", function () {
     let listItems = document.querySelectorAll(".color__selector");
     let submitButton = document.querySelector('.intro__order');
@@ -125,7 +127,6 @@ function submitOrder() {
 function showNotification() {
     alert("Ваше замовлення відправлено. З вами скоро зв'яжуться.");
 }
-
 
 //Gifts selector
 
@@ -217,27 +218,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-//Adaptive image for demonstration section
-
-// var deskImage = document.getElementById('deskImage');
-// var currentSource = deskImage.src;
-
-// function updateImageSource() {
-//   var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-//   var breakpoint = 480;
-
-//   if (screenWidth < breakpoint && currentSource !== './img/demonstration-desk-adapt.jpg') {
-//     deskImage.src = './img/demonstration-desk-adapt.jpg';
-//     currentSource = './img/demonstration-desk-adapt.jpg';
-//   } else if (screenWidth >= breakpoint && currentSource !== './img/demonstration-desk.jpg') {
-//     deskImage.src = './img/demonstration-desk.jpg';
-//     currentSource = './img/demonstration-desk.jpg';
-//   }
-// }
-
-// updateImageSource();
-// window.addEventListener('resize', updateImageSource);
-
 //Feedbacks "slick" slider
 
 $(document).ready(function () {
@@ -264,8 +244,6 @@ $(document).ready(function () {
 
     initializeSlider();
 });
-
-
 
 //FAQ question switch
 
