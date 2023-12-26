@@ -134,6 +134,7 @@ img{
 
 html{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after{
@@ -976,6 +977,7 @@ h4{
     display: flex;
     flex-direction: row;
     width: 1012px;
+    margin-right: 14px
 }
 
 .slider__item-feedback{
@@ -1483,6 +1485,10 @@ h4{
     .terms__delivery{
         height: 438px;
     }
+
+    .feedbacks__wrap{
+        padding: 42px 42px;
+    }
 }
 
 @media screen and (max-width: 820px){
@@ -1590,7 +1596,7 @@ h4{
     }
 
     .intro__picture-thumb{
-        width: 100%;
+        width: 90%;
     }
 
     .picture__caption{
@@ -1726,8 +1732,8 @@ h4{
         padding: 0;
     }
 
-    .demonstration__desk-caption-text{
-        bottom: 25%;
+    .demonstration__desk-caption-text {
+        bottom: 20%;
     }
 
     .demonstration__desk-caption-undertext{
@@ -1741,10 +1747,6 @@ h4{
 
     .demonstration__desk-pic{
         border-radius: 0;
-    }
-
-    .feedbacks__wrap{
-        padding: 42px 42px;
     }
 
     .feedbacks__slider .slick-arrow{
@@ -1885,7 +1887,8 @@ h4{
     }
 
     .demonstration__desk-pic {
-        height: 540px;
+        height: 520px;
+        object-fit: cover;
     }    
 
     .footer__wrap{
@@ -1951,6 +1954,9 @@ h4{
     }
 
     
+    .demonstration__desk-caption-text {
+        bottom: 25%;
+    }
 }
 
 @media screen and (max-width: 389px){
@@ -1974,10 +1980,6 @@ h4{
     .demonstration__desk{
         width: 100%;
     }
-
-    .demonstration__desk-pic {
-        height: auto;
-    }  
 
     .terms__guarantee {
         height: 450px;

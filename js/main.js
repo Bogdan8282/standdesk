@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var header = document.querySelector('.header');
     var headerWrap = document.querySelector('.header__wrap');
     var headerHeight = header.offsetHeight;
-    var scrollThreshold = 0.01;
+    var scrollThreshold = 0.008;
     var originalPadding = 32;
     var reducedPadding = 16;
 
@@ -18,23 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
             header.classList.remove('fixed');
             headerWrap.style.padding = originalPadding + "px";
         }
-    });
-    document.querySelectorAll('.header__link').forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - headerHeight,
-                    behavior: 'smooth'
-                });
-
-                nav.style.right = '-100%';
-            }
-        });
     });
 });
 
@@ -232,7 +215,7 @@ $(document).ready(function () {
             slidesToScroll: 2,
             responsive: [
                 {
-                    breakpoint: 980,
+                    breakpoint: 920,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
