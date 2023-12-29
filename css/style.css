@@ -455,6 +455,7 @@ h4{
 }
 
 .intro__order{
+    cursor: pointer;
     color: #FFF;
     font-size: 13px;
     font-weight: 700;
