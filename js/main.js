@@ -19,9 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             headerWrap.style.padding = originalPadding + "px";
         }
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
     const menuButton = document.querySelector('.header__menu');
     const nav = document.querySelector('.header__nav');
     const navCloseButton = document.querySelector('.header__nav-close');
@@ -47,28 +45,9 @@ document.getElementById('phoneInput').addEventListener('focus', function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     let listItems = document.querySelectorAll(".color__selector");
-
     listItems[0].classList.add("active");
-
-    listItems.forEach(function (item) {
-        item.addEventListener("click", function () {
-            listItems.forEach(function (item) {
-                item.classList.remove("active");
-            });
-            this.classList.add("active");
-        });
-    });
-});
-
-//Intro button submit
-
-document.addEventListener("DOMContentLoaded", function () {
-    let listItems = document.querySelectorAll(".color__selector");
     let submitButton = document.querySelector('.intro__order');
-
     let formSubmitted = false;
-
-    listItems[0].classList.add("active");
 
     listItems.forEach(function (item) {
         item.addEventListener("click", function () {
@@ -80,6 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    //Intro form submit
 
     submitButton.addEventListener('click', function () {
         if (!formSubmitted) {
@@ -94,6 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+//Intro button submit
 
 function submitOrder() {
     var nameInput = document.getElementById('nameInput').value;
