@@ -1353,6 +1353,10 @@ h4{
     margin-left: 4px;
 }
 
+.footer__media-pic{
+    width: 30px;
+}
+
 /* Footer end */
 
 /* Media start */
@@ -1871,10 +1875,6 @@ h4{
 
     .footer__media-link{
         margin-right: 18px;
-    }
-
-    .footer__media-pic{
-        width: 30px;
     }
 }
 
