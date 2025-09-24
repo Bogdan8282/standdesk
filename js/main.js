@@ -1,36 +1,42 @@
 //Header config
 
-document.addEventListener("DOMContentLoaded", function() {
-    var header = document.querySelector('.header');
-    var headerWrap = document.querySelector('.header__wrap');
-    var headerHeight = header.offsetHeight;
-    var scrollThreshold = 0.008;
-    var originalPadding = 32;
-    var reducedPadding = 16;
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector('.header');
+  const headerWrap = document.querySelector('.header__wrap');
+  const menuButton = document.querySelector('.header__menu');
+  const nav = document.querySelector('.header__nav');
+  const navCloseButton = document.querySelector('.header__nav-close');
 
-    window.addEventListener('scroll', function() {
-        var scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+  const SCROLL_THRESHOLD = 0.008;
+  const ORIGINAL_PADDING = 32;
+  const REDUCED_PADDING = 16;
 
-        if (scrollPercentage >= scrollThreshold) {
-            header.classList.add('fixed');
-            headerWrap.style.padding = reducedPadding + "px " + originalPadding + "px";
-        } else {
-            header.classList.remove('fixed');
-            headerWrap.style.padding = originalPadding + "px";
-        }
-    });
+  let lastScrollY = 0;
+  let ticking = false;
 
-    const menuButton = document.querySelector('.header__menu');
-    const nav = document.querySelector('.header__nav');
-    const navCloseButton = document.querySelector('.header__nav-close');
+  const updateHeader = () => {
+    lastScrollY = window.scrollY;
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const scrollPercentage = lastScrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        header.classList.toggle('fixed', scrollPercentage >= SCROLL_THRESHOLD);
+        headerWrap.style.padding = scrollPercentage >= SCROLL_THRESHOLD
+          ? `${REDUCED_PADDING}px ${ORIGINAL_PADDING}px`
+          : `${ORIGINAL_PADDING}px`;
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
 
-    menuButton.addEventListener('click', function () {
-        nav.style.right = '0';
-    });
+  const openMenu = () => nav.style.right = '0';
+  const closeMenu = () => nav.style.right = '-100%';
 
-    navCloseButton.addEventListener('click', function () {
-        nav.style.right = '-100%';
-    });
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  menuButton.addEventListener('click', openMenu);
+  navCloseButton.addEventListener('click', closeMenu);
+
+  updateHeader();
 });
 
 //Intro phone input
@@ -83,7 +89,7 @@ function submitOrder() {
     var phoneInput = document.getElementById('phoneInput').value;
 
     var selectedColorElement = document.querySelector('.color__selector.active');
-    var selectedColor = selectedColorElement ? selectedColorElement.getAttribute('data') : 'Не вибрано';
+    var selectedColor = selectedColorElement ? selectedColorElement.getAttribute('data-color') : 'Не вибрано';
 
     console.log('Ім\'я:', nameInput);
     console.log('Номер телефону:', phoneInput);
@@ -223,7 +229,7 @@ faqQuestions.forEach(question => {
         if (faqItem.classList.contains('active')) {
             answer.style.maxHeight = "0";
         } else {
-            answer.style.maxHeight = "500px";
+            answer.style.maxHeight = "100%";
         }
 
         faqItem.classList.toggle('active');
