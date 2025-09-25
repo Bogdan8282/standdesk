@@ -9,7 +9,7 @@
     <script>
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = './css/style.min.css';
+        link.href = './css/style.css';
         document.head.appendChild(link);
     </script>
     <script src="./js/jquery-3.7.1.min.js" defer></script>
@@ -146,46 +146,51 @@
         <section class="benefits">
             <div class="wrapper">
                 <div class="benefits__wrap">
-                    <div class="benefits__item file__item">
-                        <div class="benefits__item-pic">
-                            <img src="./img/svg/file.svg" alt="File" class="benefits__item-thumb">
-                        </div>
-                        <div class="benefits__item-desc">
-                            <p class="benefits__item-text">Зростає продуктивність</p>
-                        </div>
-                    </div>
-                    <div class="benefits__item heart__item">
-                        <div class="benefits__item-pic">
-                            <img src="./img/svg/heart.svg" alt="Heart" class="benefits__item-thumb">
-                        </div>
-                        <div class="benefits__item-desc">
-                            <p class="benefits__item-text">Знижує біль у спині</p>
-                        </div>
-                    </div>
-                    <div class="benefits__item arrows__item">
-                        <div class="benefits__item-pic">
-                            <img src="./img/svg/arrows.svg" alt="Arrows" class="benefits__item-thumb arrows">
-                        </div>
-                        <div class="benefits__item-desc">
-                            <p class="benefits__item-text">Покращує поставу</p>
-                        </div>
-                    </div>
-                    <div class="benefits__item nerd__item">
-                        <div class="benefits__item-pic">
-                            <img src="./img/svg/nerd.svg" alt="Nerd" class="benefits__item-thumb nerd">
-                        </div>
-                        <div class="benefits__item-desc">
-                            <p class="benefits__item-text">Бореться з втомою</p>
-                        </div>
-                    </div>
-                    <div class="benefits__item bolt__item">
-                        <div class="benefits__item-pic">
-                            <img src="./img/svg/bolt.svg" alt="Bolt" class="benefits__item-thumb bolt">
-                        </div>
-                        <div class="benefits__item-desc">
-                            <p class="benefits__item-text">Підвищує енергію</p>
-                        </div>
-                    </div>
+                    <h2 class="benefits__title">
+                        <span class="underline__yellow-spiky yellow__text">Переваги</span> продукту
+                    </h2>
+                    <ul class="benefits__list">
+                        <li class="benefits__item file__item">
+                            <div class="benefits__item-pic">
+                                <img src="./img/svg/file.svg" alt="File" class="benefits__item-thumb">
+                            </div>
+                            <div class="benefits__item-desc">
+                                <p class="benefits__item-text">Зростає продуктивність</p>
+                            </div>
+                        </li>
+                        <li class="benefits__item heart__item">
+                            <div class="benefits__item-pic">
+                                <img src="./img/svg/heart.svg" alt="Heart" class="benefits__item-thumb">
+                            </div>
+                            <div class="benefits__item-desc">
+                                <p class="benefits__item-text">Знижує біль у спині</p>
+                            </div>
+                        </li>
+                        <li class="benefits__item arrows__item">
+                            <div class="benefits__item-pic">
+                                <img src="./img/svg/arrows.svg" alt="Arrows" class="benefits__item-thumb arrows">
+                            </div>
+                            <div class="benefits__item-desc">
+                                <p class="benefits__item-text">Покращує поставу</p>
+                            </div>
+                        </li>
+                        <li class="benefits__item nerd__item">
+                            <div class="benefits__item-pic">
+                                <img src="./img/svg/nerd.svg" alt="Nerd" class="benefits__item-thumb nerd">
+                            </div>
+                            <div class="benefits__item-desc">
+                                <p class="benefits__item-text">Бореться з втомою</p>
+                            </div>
+                        </li>
+                        <li class="benefits__item bolt__item">
+                            <div class="benefits__item-pic">
+                                <img src="./img/svg/bolt.svg" alt="Bolt" class="benefits__item-thumb bolt">
+                            </div>
+                            <div class="benefits__item-desc">
+                                <p class="benefits__item-text">Підвищує енергію</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -339,8 +344,11 @@
                     <div class="demonstration__desk">
                         <div class="demonstration__desk-item">
                             <div class="demonstration__desk-image">
-                                <img src="./img/demonstration-desk.jpg" alt="StandDesk Picture" id="deskImage"
-                                    class="demonstration__desk-pic">
+                                <picture>
+                                    <source srcset="./img/demonstration-desk-adapt.jpg" media="(max-width: 390px)">
+                                    <img src="./img/demonstration-desk.jpg" alt="StandDesk Picture"
+                                        class="demonstration__desk-pic">
+                                </picture>
                             </div>
                             <div class="demonstration__desk-caption">
                                 <h2 class="demonstration__desk-caption-main">

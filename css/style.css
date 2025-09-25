@@ -332,6 +332,8 @@ h4 {
   justify-content: space-between;
   padding: 32px;
   transition: padding 0.3s ease;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -516,7 +518,7 @@ h4 {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 #natural::before {
@@ -624,6 +626,18 @@ h4 {
   display: flex;
   gap: 16px;
   justify-content: center;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+.benefits__list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.benefits__title {
+  display: none;
 }
 
 .benefits__item {
@@ -992,6 +1006,10 @@ h4 {
   line-height: 26px;
 }
 
+.demonstration__logo {
+  line-height: 0;
+}
+
 /* Demonstration end */
 /* Feedbacks start */
 .feedbacks {
@@ -1046,12 +1064,12 @@ h4 {
 }
 
 .feedbacks__slider .slick-arrow.slick-prev {
-  right: 146px;
+  right: 155px;
   background: url(../img/svg/arrow-left.svg) 0 0 / 100% no-repeat;
 }
 
 .feedbacks__slider .slick-arrow.slick-next {
-  right: 106px;
+  right: 115px;
   background: url(../img/svg/arrow-right.svg) 0 0 / 100% no-repeat;
 }
 
@@ -1283,6 +1301,7 @@ h4 {
   justify-content: space-around;
   margin-bottom: 64px;
   width: 100%;
+  line-height: 1.4 !important;
 }
 
 .faq__caption-main {
@@ -1341,7 +1360,7 @@ h4 {
 .faq__item-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
+  transition: max-height 0.2s linear, padding 0.1s linear, opacity 0.3s linear;
   opacity: 0;
 }
 
@@ -1379,6 +1398,8 @@ h4 {
   align-items: center;
   padding: 32px;
   gap: 60px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .footer__info {
@@ -1438,8 +1459,13 @@ h4 {
 /* Footer end */
 /* Media start */
 @media screen and (max-width: 1248px) {
-  .benefits__wrap {
-    padding: 0 16px;
+  .color__selector {
+    flex: 1 1 150px;
+  }
+
+  .benefits__title {
+    font-size: 26px;
+    margin-left: 16px;
   }
 
   .characteristics__wrap {
@@ -1549,6 +1575,11 @@ h4 {
 }
 
 @media screen and (max-width: 980px) {
+  .color__selector {
+    max-width: 360px;
+    width: 100%;
+  }
+
   .header__menu {
     display: block;
     cursor: pointer;
@@ -1630,7 +1661,11 @@ h4 {
     padding-right: 12px;
   }
 
-  .benefits__wrap {
+  .benefits__title {
+    display: block;
+  }
+
+  .benefits__list {
     flex-wrap: wrap;
   }
 
@@ -1726,6 +1761,10 @@ h4 {
     box-shadow: none;
   }
 
+  .intro__offer {
+    margin-bottom: 25px;
+  }
+
   .intro__offer-pic {
     margin-top: 0;
   }
@@ -1752,8 +1791,19 @@ h4 {
 
   .intro__form-adapt {
     display: flex;
-    max-width: 80%;
-    padding: 0 16px;
+    padding: 0 32px;
+  }
+
+  .picture__caption {
+    bottom: -60px;
+  }
+
+  .intro__picture-thumb {
+    width: 100%;
+  }
+
+  .intro__wrap {
+    margin: 0;
   }
 
   .intro__form-title {
@@ -1774,7 +1824,11 @@ h4 {
   }
 
   .intro__form-advantages {
-    display: none;
+    text-align: right;
+    margin: 0 auto;
+    max-width: 296px;
+    font-size: 16px;
+    content: "Наші столи з регулюванням висоти - це ваш крок до <span class="bold italic">здорового</span> та <span class="bold italic">продуктивного</span> життя";
   }
 
   .search__wrap {
@@ -1784,12 +1838,6 @@ h4 {
   .entry__field {
     width: 360px;
   }
-
-  .color__selector {
-    max-width: 360px;
-    width: 100%;
-  }
-
   .color__selection {
     justify-content: center;
     margin-left: auto;
@@ -1804,7 +1852,7 @@ h4 {
   .gifts__wrap {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
   }
 
   .gifts__text-adapt {
@@ -1917,6 +1965,19 @@ h4 {
 }
 
 @media screen and (max-width: 760px) {
+  .gifts__wrap {
+    align-items: flex-start;
+  }
+
+  .gifts__image {
+    max-width: 100%;
+  }
+
+  .gifts__caption {
+    font-size: 22px;
+    margin-bottom: 15px !important;
+  }
+
   .gifts__list-item {
     font-size: 16px;
   }
@@ -1996,8 +2057,9 @@ h4 {
   }
 
   .gifts__text-adapt .gifts__caption {
-    max-width: 70%;
-    margin: 0 auto;
+    max-width: 260px;
+    width: 100%;
+    margin-left: 16px;
   }
 
   .characteristics__list-item p {
@@ -2021,7 +2083,11 @@ h4 {
   }
 
   .footer__media-link {
-    margin-right: 18px;
+    margin-right: 0;
+  }
+
+  .footer__media {
+    gap: 48px;
   }
 
   .footer__wrap {
@@ -2044,6 +2110,14 @@ h4 {
   h4 {
     font-weight: 700;
     font-size: 9px;
+  }
+
+  .faq__caption {
+    padding-left: 16px;
+  }
+
+  .gifts__caption-prolong {
+    font-size: 22px;
   }
 
   .characteristics__list {
@@ -2072,9 +2146,66 @@ h4 {
     object-fit: cover;
   }
 
+  .intro__form-offer {
+    text-align: left;
+    margin: 50px 16px 25px 16px;
+    max-width: 248px;
+  }
+
+  .intro__form {
+    position: relative;
+  }
+
+  .intro__form::before {
+    position: absolute;
+    content: "";
+    top: 109px;
+    left: 0;
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  }
+
+  .desk__view {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  .desk__view::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+  }
+
+  .desk__view-pic {
+    display: flex;
+    justify-content: center;
+  }
+
+  .view__wrap {
+    padding-top: 24px;
+  }
+
+  .view__text {
+    margin-bottom: 0;
+  }
+
   .entry__field {
     max-width: 360px;
     width: 100%;
+    margin-inline: auto;
+  }
+
+  .terms {
+    margin-bottom: 25px;
+  }
+
+  .faq__caption {
+    margin-bottom: 25px;
   }
 
   .search__wrap {
@@ -2085,8 +2216,17 @@ h4 {
     margin-bottom: 8px;
   }
 
-  .color__selector {
-    max-width: 100%;
+  .intro {
+    margin-bottom: 32px;
+  }
+
+  .benefits__wrap {
+    gap: 32px;
+  }
+
+  .footer__wrap {
+    padding: 25px 48px;
+    gap: 24px;
   }
 }
 
@@ -2110,7 +2250,7 @@ h4 {
     height: 440px;
   }
 
-  .benefits__wrap {
+  .benefits__list {
     flex-direction: column;
     align-items: center;
     gap: 0;
@@ -2140,17 +2280,42 @@ h4 {
   .characteristics__wrap {
     padding: 16px;
   }
+
+  .faq {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 389px) {
+  .intro__form-title-adapt {
+    width: 239px;
+  }
+
   .view__list {
     gap: 6px;
+  }
+
+  .demonstration__desk-pic {
+    height: 660px;
+  }
+
+  .demonstration__desk-caption {
+    display: none;
+  }
+
+  .demonstration__desk-image::after {
+    display: none;
   }
 
   .view__image {
     max-width: 320px;
     width: 100%;
     height: 400px;
+  }
+
+  .desk__view-pic {
+    justify-content: center;
+    display: flex;
   }
 
   .view__text-adapt {
@@ -2168,6 +2333,10 @@ h4 {
   .terms__delivery {
     height: 450px;
   }
+
+  .slick-arrow {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -2183,10 +2352,6 @@ h4 {
 
   .terms__delivery {
     height: 480px;
-  }
-
-  .slick-arrow {
-    display: none !important;
   }
 }
 

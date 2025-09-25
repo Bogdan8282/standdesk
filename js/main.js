@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById('phoneInput').addEventListener('focus', function() {
     if (this.value === '') {
-        this.value = '+38 (';
+        this.value = '+38 ';
     }
 });
 
