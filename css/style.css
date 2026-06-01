@@ -1367,7 +1367,7 @@ h4 {
 .faq__item-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s linear, padding 0.1s linear, opacity 0.2s linear;
+  transition: max-height 0.2s linear, padding 0.1s linear, opacity 0.15s linear;
   opacity: 0;
 }
 
@@ -1383,7 +1383,7 @@ h4 {
   font-size: 14px;
   font-weight: 400;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.15s ease;
 }
 
 .faq__item.active .faq__item-answer-text {
