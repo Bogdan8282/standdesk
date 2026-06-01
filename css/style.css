@@ -1105,6 +1105,13 @@ h4 {
   text-align: right;
 }
 
+.feedback__author-pic img {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
 .feedback__author-name {
   color: var(--yellow);
   text-align: right;
@@ -1112,7 +1119,7 @@ h4 {
   font-weight: 500;
   line-height: 30px;
   letter-spacing: 0.16px;
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 .feedback__author-info {
